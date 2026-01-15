@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 4040
 app.use(express.json())
 app.use(cors({
     credentials: true,
-    origin: "todo-manager-ten-gold.vercel.app",
+    origin: "http://localhost:5173",
     methods: ["POST", "GET", "PATCH", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type" , "Authorization"]
 }))
