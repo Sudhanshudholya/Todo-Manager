@@ -21,6 +21,10 @@ app.use(cors({
 
 app.use("/todo", todoRouter)
 
+app.get("/", (req, res) => {
+  res.send("Todo Manager API is running 🚀");
+});
+
 app.listen(PORT, () => {
     connectDB()
     console.log('Server is running on port 2000')
