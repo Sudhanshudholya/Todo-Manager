@@ -11,9 +11,12 @@ const Todo = () => {
 
   const API = import.meta.env.VITE_APP_API_URI;
 
+  console.log(API, "API")
+
   const fetchedTodo = async () => {
     try {
       const res = await axios.get(`${API}/get-todos`);
+      console.log(res, "ldkdjdjf")
       setTodos(res.data.allTodos || res.data);
     } catch {
       toast.error("Failed to fetch todos");
