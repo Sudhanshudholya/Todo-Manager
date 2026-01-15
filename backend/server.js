@@ -7,7 +7,7 @@ import todoRouter from "./routes/todo.routes.js"
 
 
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 4040
 
 
 app.use(express.json())
